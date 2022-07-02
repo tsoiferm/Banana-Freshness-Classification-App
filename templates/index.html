@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Image Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<header class="the-header">
+    <h2>🍌Bana🍌</h2>
+    <h4>Don't Go Bananas!</h4>
+</header>
+
+<header class="sub-header"></header>
+
+<body class="the-body">
+
+  <div class="row">
+    <div class="column" id="c-one">
+      <h5>Welcome to Bana! <br> <br> Bana predicts the freshness of your bananas!</h5>
+    </div>
+    <div class="column" id="c-two">
+      <h6>How It Works: <br> <br> Upload an image of your banana, and let Bana predict whether it's fresh or spoiled!</h6>
+    </div>
+    <div class="column" id="c-three">
+      <h7>ML Solution to a Common Issue <br> <br>Can't determine if that ambiguously spotted snack has gone due? Don't go bananas, let Bana decide!</h7>
+    </div>
+  </div>
+
+  <header class="sub-header"></header>
+
+  <div class="grid-container">
+    <!--Banana-->
+    <div class="containerBanana">
+      <h13 class="control-label col-sm-2">Upload Your Banana:</h13>  
+      <form class="form-horizontal" action="/submitBanana" method="post" enctype="multipart/form-data">
+        <div id="form-inner">     
+          <div id="the-input4">    
+            <input type="file" class="form-control" id="the-form4" placeholder="Hours Studied"  name="my_image" id="pwd">
+            <h43>Select 🍌 Image</h43>
+          </div>
+          <button type="submit" class="btn-btn-success">Submit</button>
+        </div>
+      </form>
+    
+      {% if prediction4 %}
+      <img src="{{img_path4}}" height="175px" width="175px">
+      <h2 class="predict"> Your Prediction: <i> {{prediction4}} </i></h2>
+    
+      {% endif %}
+    
+    </div>
+
+  </div>
+  
+  </body>
+  
+  </html>
+  
