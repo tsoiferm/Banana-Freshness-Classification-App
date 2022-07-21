@@ -6,6 +6,8 @@ Images are resized to 224x224 and rescaled by dividing the image by 255. The bat
 
 The model is compiled with an Adam optimizer, a sparse categorical cross entropy loss function (sparse because the classes are integers, not vectors), and accuracy is defined as the metric. The model is traied with 15 epochs. 
 
+Accuracy is used as the metric as the dataset is balanced (there is an equal number of samples in each class).
+
 Used Python, Flask, TensorFlow, Keras, HTML, CSS, NumPy, Matplotlib
 
 **Dataset Citation:**
